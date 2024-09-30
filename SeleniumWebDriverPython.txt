@@ -1,0 +1,6 @@
+*Instalar visual Studio Code
+*Instalar Python (tildas las 2 opciones en la primera ventana)
+*Instalar Selenium (pip install selenium)
+
+Paginas para probar Testing
+https://qarmy.ar/webs-practicas-testing/

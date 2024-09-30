@@ -1,0 +1,24 @@
+Pytest es una herramienta de testing para aplicaciones en Python.
+Características más destacadas:
+
+    Simplicidad: Pytest permite escribir pruebas de una manera muy simple. No requiere una estructura específica o configuraciones complicadas, lo que facilita la integración en cualquier proyecto.
+
+    Flexibilidad: Puedes utilizarlo para probar todo tipo de aplicaciones y librerías en Python, desde proyectos pequeños hasta grandes sistemas complejos.
+
+    Fixtures: Estas son funciones que se ejecutan antes de las pruebas y permiten preparar el entorno necesario para cada caso de prueba, lo que ayuda a reducir la duplicación de código.
+
+    Soporte para Asserts: Pytest convierte automáticamente las declaraciones assert en pruebas, lo que significa que no necesitas aprender ninguna sintaxis específica para escribir las pruebas.
+
+    Extensible: Existen muchos plugins que puedes integrar con Pytest para ampliar sus capacidades, como el manejo de pruebas de rendimiento, la generación de informes detallados, o la integración con otras herramientas de desarrollo.
+
+    Detección automática de pruebas: Pytest puede detectar automáticamente archivos y funciones de prueba en tu proyecto, lo que facilita la organización y ejecución de las pruebas.
+
+Pytest es una excelente opción para asegurarse de que el código funciona correctamente y para mantener la calidad del software a lo largo del desarrollo.
+
+*Instalar PyTest desde el sitio oficial https://docs.pytest.org/en/stable/getting-started.html
+
+importar pytest
+
+def (definir las funciones)
+*Para ejecutar la prueba pytest .\Login1.py -s -v (agrega detalle de cada prueba)
+

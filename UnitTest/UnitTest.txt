@@ -1,0 +1,36 @@
+Es un módulo incorporado en Python que se utiliza para escribir y ejecutar pruebas automáticas de código, permite verificar que diferentes partes de un programa funcionen correctamente de manera aislada y en conjunto, sigue la estructura y el estilo de los marcos de pruebas unitarias
+*Caracteristicas:
+	-Estructura de prueba: Permite organizar las pruebas en clases que heredan de unittest.TestCase. Dentro de estas clases, cada método que comienza con test_ se considera una prueba.
+
+	-Assertions: unittest ofrece varios métodos de aserción (assert) que se utilizan para verificar que las condiciones deseadas se cumplan. Por ejemplo, assertEqual para comprobar la igualdad de dos valores, assertTrue para verificar si una condición es verdadera, y muchos más.
+
+	-Configuración y limpieza: El módulo proporciona métodos como setUp y tearDown, que se ejecutan antes y después de cada prueba respectivamente. Esto es útil para preparar el entorno antes de cada prueba y limpiar después de ella.
+
+	-Ejecutar pruebas: Puedes ejecutar las pruebas directamente desde la línea de comandos utilizando el propio módulo o a través de otros marcos de pruebas que integren unittest.
+
+------------------------------------------------------------------------------------------
+import unittest
+
+# Clase de prueba que hereda de unittest.TestCase
+class TestCalculadora(unittest.TestCase):
+    
+    # Método de configuración (opcional)
+    def setUp(self):
+        self.valor1 = 10
+        self.valor2 = 5
+    
+    # Un test que comprueba la suma
+    def test_suma(self):
+        resultado = self.valor1 + self.valor2
+        self.assertEqual(resultado, 15)
+    
+    # Un test que comprueba la resta
+    def test_resta(self):
+        resultado = self.valor1 - self.valor2
+        self.assertEqual(resultado, 5)
+
+# Ejecutar las pruebas
+if __name__ == '__main__':
+    unittest.main()
+------------------------------------------------------------------------------------------
+Se maneja por medio de una clase (se la nombre como se quiere), 
