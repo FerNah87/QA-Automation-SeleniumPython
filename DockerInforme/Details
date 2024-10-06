@@ -41,6 +41,7 @@ Otra forma de "ver" las pruebas es capturando pantallazos de los navegadores dur
 time.sleep(2)  # Esperar un poco para cargar la página
 driver.save_screenshot("google_homepage.png")
 
+--------------------------------------------------------------------------------
 Agregar un informe HTML con pytest-html
 1. Instalar pytest y pytest-html
     pip install pytest pytest-html
@@ -50,6 +51,12 @@ Agregar un informe HTML con pytest-html
 Ahora, puedes ejecutar las pruebas y generar un informe HTML:
     pytest --html=report.html
 
+ Ejecuta pytest solo en tu archivo de prueba específico
+
+En lugar de ejecutar pytest en todo el directorio, puedes ejecutar solo el archivo de prueba que contiene el código de Selenium. Hazlo indicando la ruta del archivo directamente en el comando de ejecución de pytest.
+        pytest nombre_del_archivo.py --html=report.html
+
+--------------------------------------------------------------------------------
 Agregar un informe con Allure
 1. Instalar Allure y allure-pytest Asegúrate también de tener Allure Commandline instalado en tu máquina https://allurereport.org/docs/install/
     pip install allure-pytest
