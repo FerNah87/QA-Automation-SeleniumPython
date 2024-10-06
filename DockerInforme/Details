@@ -34,7 +34,12 @@ Conéctate al contenedor usando el cliente VNC
 Una vez instalado el cliente VNC, abre la aplicación y conéctate a localhost:5900. La contraseña predeterminada para las imágenes de Selenium es secret
 
 
+Captura de pantallas en tu script de Selenium
 
+Otra forma de "ver" las pruebas es capturando pantallazos de los navegadores durante la ejecución. Puedes agregar capturas de pantalla a tu código en Python, por ejemplo:
+# Tomar captura de pantalla
+time.sleep(2)  # Esperar un poco para cargar la página
+driver.save_screenshot("google_homepage.png")
 
 Agregar un informe HTML con pytest-html
 1. Instalar pytest y pytest-html

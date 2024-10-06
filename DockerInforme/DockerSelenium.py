@@ -47,9 +47,3 @@ time.sleep(t)
 
 # Cerrar el navegador
 driver.quit()
-
-# Generando el informe (VER ESTO PARA COMPLETAR)
-#with open('C:\Users\Catu Gry\Python\AutSeleniumPython', 'w') as f:
-#    f.write(f"Nombre ingresado: {nombre.get_attribute('Fer Z')}\n")
-#    f.write(f"Email ingresado: {email.get_attribute('pituto@gmail.com')}\n")
-#    f.write("Test Formulario.\n")
