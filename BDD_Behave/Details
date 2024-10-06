@@ -1,0 +1,13 @@
+https://behave.readthedocs.io/en/latest/
+dentro de la carpeta BDD se crea el paquete features
+crear el archivo feature (xxxx.feature) 
+        Agregar los pasos
+            Feature: Primer demo
+            Scenario: run a simple test
+            Given Abriendo el Navegador
+            When Cargando el Nombre de Usuario
+            Then Cargando el Email
+            And Cargando su direccion
+ejecutar por consola 
+    \AutSeleniumPython\BDD_Behave\features> behave
+copiar el resultado en el archivo .py donde se van a crear los casos

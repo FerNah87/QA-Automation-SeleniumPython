@@ -1,0 +1,58 @@
+Docker
+-Docker instalado en tu máquina.
+-Python Selenium scripts listos para ejecutar.
+
+Pasos para usar Docker con Selenium WebDriver y Python
+
+    Usar una imagen de Selenium con navegadores preconfigurados: Selenium ofrece imágenes Docker que contienen navegadores como Chrome y Firefox ya preinstalados, junto con un WebDriver.
+
+    En este caso, usarías la imagen selenium/standalone-chrome para tener Chrome con el WebDriver dentro de un contenedor. (https://hub.docker.com/r/selenium/standalone-chrome)
+
+Crear el archivo de tests, por ejemplo DockerSelenium.py:
+
+Ejecutar el contenedor de Selenium Standalone Chrome
+El comando para ejecutar el contenedor de Selenium Standalone Chrome es el siguiente:
+    docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome
+
+        Desglose del comando:
+        docker run: Es el comando para ejecutar contenedores.
+            -d: Ejecuta el contenedor en segundo plano (detached mode).
+            -p 4444:4444: Mapea el puerto 4444 del contenedor al puerto 4444 de tu máquina local (este puerto es donde escucha Selenium WebDriver).
+            --shm-size="2g": Aumenta la memoria compartida para evitar problemas de ejecución del navegador Chrome (como cuando se queda colgado).
+            selenium/standalone-chrome: Es la imagen oficial de Docker que incluye Chrome con Selenium WebDriver.
+
+Verificar que Selenium está corriendo
+http://localhost:4444
+
+Usar Selenium en tu script Python ejemplo DockerSelenium.py:
+
+Visualización de pruebas con VNC (Virtual Network Computing)
+servidor VNC que te permite ver la ejecución del navegador en tiempo real.
+https://www.realvnc.com/es/connect/download/viewer/?lai_vid=jyvV4dmL8tkG&lai_sr=0-4&lai_sl=l
+
+Conéctate al contenedor usando el cliente VNC
+Una vez instalado el cliente VNC, abre la aplicación y conéctate a localhost:5900. La contraseña predeterminada para las imágenes de Selenium es secret
+
+
+
+
+Agregar un informe HTML con pytest-html
+1. Instalar pytest y pytest-html
+    pip install pytest pytest-html
+2. Modificar tu script para pytest
+    Cambia tu script para que sea compatible con pytest. Ejemplo DockerPyTestHtml.
+3. Generar el informe HTML
+Ahora, puedes ejecutar las pruebas y generar un informe HTML:
+    pytest --html=report.html
+
+Agregar un informe con Allure
+1. Instalar Allure y allure-pytest Asegúrate también de tener Allure Commandline instalado en tu máquina https://allurereport.org/docs/install/
+    pip install allure-pytest
+2. Modificar el script con anotaciones de Allure
+    Puedes agregar anotaciones de Allure para que las pruebas generen un informe más detallado y visual. Ejemplo DockerPyTestAllure.
+Puedes agregar anotaciones de Allure para que las pruebas generen un informe más detallado y visual.
+3. Ejecutar las pruebas y generar el informe Allure
+    Primero, ejecuta las pruebas para generar los resultados de Allure:
+        pytest --alluredir=allure-results
+    Luego, genera y sirve el informe de Allure:
+        allure serve allure-results

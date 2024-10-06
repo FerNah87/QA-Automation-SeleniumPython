@@ -1,6 +1,6 @@
 Feature: Primer demo
 
-  Scenario: run a simple test
+  Scenario: Este es el primer Test
      Given Abriendo el Navegador
       When Cargando el Nombre de Usuario
       Then Cargando el Email
